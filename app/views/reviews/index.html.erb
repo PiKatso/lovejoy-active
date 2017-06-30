@@ -1,11 +1,11 @@
-<div class="newest products">
+<div class="newest">
   <h3 class="banner">Newest Items</h3>
   <% @newest_products.each do |new_product| %>
   <div class="product"><a href="products/<%= new_product.id %>"><%= image_tag new_product.url %></a></div>
   <% end %>
 </div>
 
-<div class="reviewed products">
+<div class="reviewed">
   <h3 class="banner">Most reviewed</h3>
   <% @most_reviews.each do |product| %>
   <div class="product"><a href="products/<%= product.id %>"><%= image_tag product.url %></a></div>

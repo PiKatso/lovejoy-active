@@ -1,7 +1,7 @@
 require 'rails_helper'
-# require 'database_cleaner'
+require 'database_cleaner'
 
-# DatabaseCleaner.strategy = :truncation
+DatabaseCleaner.strategy = :truncation
 
 describe 'visit root route to product path' do
   it 'navigates from root to product path' do
@@ -11,4 +11,4 @@ describe 'visit root route to product path' do
     expect(page).to have_content 'Products'
   end
 end
-# DatabaseCleaner.clean
+DatabaseCleaner.clean
