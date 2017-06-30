@@ -9,11 +9,17 @@
   </head>
 
   <body>
-    <div class="nav-bar">
-      <p>Logo</p>
-      <%= link_to "Lovejoy Active", root_path %>
-      <%= link_to "Products", products_path %>
-    </div>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <%= link_to "LoveJoy Active", root_path %>
+        </div>
+        <div class="nav navbar-nav navbar-right">
+          <%= link_to "SHOP", products_path %>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <%= flash[:alert] %>
       <%= flash[:notice] %>
