@@ -10,17 +10,21 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
+
 gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'launchy'
+  gem 'capybara'
   gem 'pry'
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
 end
 
 group :development do
