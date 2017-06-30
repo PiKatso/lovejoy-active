@@ -1,5 +1,5 @@
-# Product.destroy_all
-# Review.destroy_all
+Product.destroy_all
+Review.destroy_all
 
 50.times do |i|
   product = Product.create!(

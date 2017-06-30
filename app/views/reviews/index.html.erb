@@ -1,11 +1,11 @@
 <h1> reviews/index page</h1>
 
 <h3>Newest Items</h3>
-<p><%= @newest_products.name %></p>
+<% @newest_products.each do |new_product| %>
+ <li><a href="products/<%= new_product.id %>"><%= new_product.name %></a></li>
+ <% end %>
 
 <h3>Most reviewed</h3>
-<%= @most_reviews.name %>
-
 <% @most_reviews.each do |product| %>
  <li><a href="products/<%= product.id %>"><%= product.name %></a></li>
 <% end %>
