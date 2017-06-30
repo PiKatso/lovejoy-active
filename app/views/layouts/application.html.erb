@@ -9,9 +9,15 @@
   </head>
 
   <body>
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
-
-    <%= yield %>
+    <div class="nav-bar">
+      <p>Logo</p>
+      <%= link_to "Lovejoy Active", root_path %>
+      <%= link_to "Products", products_path %>
+    </div>
+    <div class="container">
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+      <%= yield %>
+    </div>
   </body>
 </html>
