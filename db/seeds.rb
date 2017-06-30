@@ -1,16 +1,20 @@
-Product.destroy_all
+# Product.destroy_all
+# Review.destroy_all
 
 50.times do |i|
-  product = Product.create!(name: Faker::Coffee.blend_name,
-                            cost: Faker::Number.decimal(2),
-                            origin: Faker::Coffee.origin,
-                            brand: Faker::Superhero.descriptor,
-                            style: Faker::Coffee.variety)
-
+  product = Product.create!(
+    name: Faker::Coffee.blend_name,
+    cost: Faker::Number.decimal(2),
+    origin: Faker::Coffee.origin,
+    brand: Faker::Superhero.descriptor,
+    style: Faker::Coffee.variety
+    )
   5.times do |i|
-    review = product.reviews.create!(author: Faker::TwinPeaks.character,
-                                      content: Faker::Coffee.notes,
-                                      rating: Faker::Number.between(1, 5))
+    review = product.reviews.create!(
+        author: Faker::TwinPeaks.character,
+        content: Faker::Coffee.notes,
+        rating: Faker::Number.between(1, 5)
+        )
   end
 end
 
