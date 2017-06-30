@@ -1,7 +1,21 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Product.destroy_all
+
+50.times do |i|
+  product = Product.create!(name: Faker::Coffee.blend_name,
+                            cost: Faker::Number.decimal(2),
+                            origin: Faker::Coffee.origin,
+                            brand: Faker::Superhero.descriptor,
+                            style: Faker::Coffee.variety)
+
+  5.times do |i|
+    review = product.reviews.create!(author: Faker::TwinPeaks.character,
+                                      content: Faker::Coffee.notes,
+                                      rating: Faker::Number.between(1, 5))
+  end
+end
+
+
+p "Created #{Product.count} products"
+
+# once initially set up/to edit must run 'rake db:setup'
+# also 'rake db:test:prepare'

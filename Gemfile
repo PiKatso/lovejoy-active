@@ -10,6 +10,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
+gem 'faker'
 
 gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.2'
@@ -23,6 +24,7 @@ group :development, :test do
   gem 'launchy'
   gem 'capybara'
   gem 'pry'
+  gem 'faker'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
 end

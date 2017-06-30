@@ -1,7 +1,9 @@
 class ReviewsController < ApplicationController
   def index
     @reviews = Review.all
-    @products = Products.all
+    @products = Product.all
+    @newest_products = Product.all.newest_products
+    @most_reviews = Product.most_reviews
   end
 
   def show

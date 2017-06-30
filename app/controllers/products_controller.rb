@@ -1,8 +1,6 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all.order(:name)
-    # @most_reviews = Product.most_reviews
-    # @contributor = Reviews.main_contributor
   end
 
   def show
@@ -44,11 +42,6 @@ class ProductsController < ApplicationController
       redirect_to products_path
     end
   end
-
-  # def most_reviews
-  #   @products = Product.most_reviews
-  #   render
-  # end
 
 private
   def product_params
