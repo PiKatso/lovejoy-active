@@ -14,7 +14,6 @@ Product.destroy_all
   end
 end
 
-
 p "Created #{Product.count} products"
 
 # once initially set up/to edit must run 'rake db:setup'

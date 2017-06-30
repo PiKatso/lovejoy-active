@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   def index
     @reviews = Review.all
     @products = Product.all
-    @newest_products = Product.all.newest_products
+    @newest_products = Product.newest_products
     @most_reviews = Product.most_reviews
   end
 

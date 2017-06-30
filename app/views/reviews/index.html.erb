@@ -1,12 +1,16 @@
 <h1> reviews/index page</h1>
 
 <h3>Newest Items</h3>
-<p><%= @newest_products %></p>
+<p><%= @newest_products.name %></p>
 
 <h3>Most reviewed</h3>
-<%= @most_reviews %>
+<%= @most_reviews.name %>
 
-
+<% @most_reviews.each do |product| %>
+ <li><a href="products/<%= product.id %>"><%= product.name %></a></li>
+<% end %>
+<br>
+<br>
 <p> about us gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock gobbldy goock </p>
 
 <h4><%= link_to "Shop All", products_path %></h4>
