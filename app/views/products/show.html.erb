@@ -1,8 +1,31 @@
 <h1><%= @product.name %></h1>
+<p><%= link_to "review this item", new_product_review_path(@product) %></p>
 <h3>by <%= @product.brand %></h3>
 <h3>from <%= @product.origin %></h3>
 <h3>$ <%= @product.cost %></h3>
+<h3><%= @product.style %></h3>
 
+<% if @product.reviews.any? %>
+  <h4>Here are the reviews for this product:</h4>
+
+  <ul>
+    <% @product.reviews.each do |review| %>
+      <li>
+        <%= review.content %> ~ <em><%= review.rating %> |
+        <%= link_to "Edit", edit_product_review_path(@product, review) %> |
+        <%= link_to "Delete", product_review_path(@product, review),
+                                 :data => {:confirm => "Are you sure?",
+                                                :method => "delete"} %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no reviews yet!</p>
+  <p><%= link_to "Leave a review", new_product_review_path(@product) %></p>
+<% end %>
+
+<br>
+<hr>
 <p><%= link_to "Products", products_path %></p>
 <p><%= link_to "Edit", edit_product_path(@product) %></p>
 <p><%= link_to "Delete", product_path(@product),
