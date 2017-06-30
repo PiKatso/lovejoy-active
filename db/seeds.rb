@@ -7,7 +7,8 @@ Review.destroy_all
     cost: Faker::Number.decimal(2),
     origin: Faker::Coffee.origin,
     brand: Faker::Superhero.descriptor,
-    style: Faker::Coffee.variety
+    style: Faker::Coffee.variety,
+    url: Faker::Avatar.image
     )
   5.times do |i|
     review = product.reviews.create!(

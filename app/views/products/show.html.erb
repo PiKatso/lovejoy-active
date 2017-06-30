@@ -1,3 +1,4 @@
+<%= image_tag @product.url %>
 <h1><%= @product.name %></h1>
 <p><%= link_to "review this item", new_product_review_path(@product) %></p>
 <h3>by <%= @product.brand %></h3>

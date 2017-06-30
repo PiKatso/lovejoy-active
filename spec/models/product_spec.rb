@@ -5,5 +5,6 @@ describe Product do
   it { should validate_presence_of :cost }
   it { should validate_presence_of :origin }
   it { should validate_presence_of :brand }
+  it { should validate_presence_of :url }
   it { should have_many :reviews }
 end

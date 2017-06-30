@@ -1,2 +1,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+// .navbar-inverse {
+//      background-color: #222;
+//      border-color: #080808;
+// }
+
+// application.html.erb
+.navbar {
+ background-color: #D3F0EC;
+} .navbar-header {
+  font-size: 40px;
+  color: white;
+} .navbar-header :hover {
+  text-decoration: none;
+}
+
+
+// root
+.products {
+  width: 100%
+} .banner {
+  color: #080808;
+}
