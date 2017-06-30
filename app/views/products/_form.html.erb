@@ -1,0 +1,15 @@
+<%= render "layouts/errors", :object => @product %>
+
+<%= form_for @product do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :cost %>
+  <%= f.number_field :cost %>
+  <%= f.label :origin %>
+  <%= f.text_field :origin %>
+  <%= f.label :brand %>
+  <%= f.text_field :brand %>
+  <%= f.label :style %>
+  <%= f.select :style, ["Bottoms", "Tops", "Accessories", "Grip", "Shoes"] %>
+  <%= f.submit %>
+<% end %>
