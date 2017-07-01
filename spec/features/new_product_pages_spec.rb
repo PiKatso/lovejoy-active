@@ -5,7 +5,6 @@ DatabaseCleaner.strategy = :truncation
 
 describe 'visit product path, create new product' do
   it 'navigates from product path to create new' do
-    # product1 = Product.create(:name => 'product', :cost => 25.0, :origin => "Boston, MA", :brand => "RAD", :style => "Bottoms", :url => "http://mindlessones.com/wp-content/uploads/2012/04/HermesMoebius04.jpg")
     visit products_path
     click_link 'New Product'
     fill_in 'Name', :with => 'Product'
