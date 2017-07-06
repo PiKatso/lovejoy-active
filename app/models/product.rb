@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
-  validates :name, :cost, :origin, :brand, :url, :presence => true
-  has_many :reviews
+  validates :name, :origin, :brand, :url, :presence => true
+  validates :cost, numericality: true, :presence => true
+  has_many :reviews, dependent: :destroy
 
   scope :newest_products, -> { order(created_at: :desc).limit(3)}
 
