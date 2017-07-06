@@ -25,9 +25,12 @@ group :development, :test do
   gem 'launchy'
   gem 'capybara'
   gem 'pry'
+
   gem 'faker', github: 'stympy/faker'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'simplecov', require: false
 end
 
 group :development do
