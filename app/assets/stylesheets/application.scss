@@ -9,21 +9,51 @@
 
 // application.html.erb
 .navbar {
- background-color: #D3F0EC;
+ width: 100%;
+ background-color: orange;
 } .navbar-header {
   font-size: 40px;
 } .navbar-header :hover {
   text-decoration: none;
+} .navbar-right {
+  padding-right: 10px;
+  padding-top: 5px;
 }
 
+a {
+  text-decoration: none;
+  color: #080808;
+}
 
 // root
 .banner {
+  text-align: center;
+  // background-color: #D3F0EC;
   color: #080808;
   width: 100%
 }
-.product {
 
-} a {
-  width: 300px;
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+} .product a {
+  // display: flex;
+  // justify-content: center;
+  // flex-wrap: wrap;
+  // width: 300px;
+}
+.style_image {
+  border: 1px solid #D3F0EC;
+  margin: 5px;
+  // width: 200px;
+  // height: auto;
 }
