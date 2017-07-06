@@ -4,6 +4,7 @@ class ReviewsController < ApplicationController
     @products = Product.all
     @newest_products = Product.newest_products
     @most_reviews = Product.most_reviews
+    @locally_made = Product.locally_made
   end
 
   def show

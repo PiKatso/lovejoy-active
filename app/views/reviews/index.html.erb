@@ -11,6 +11,13 @@
   <div class="product"><a href="products/<%= product.id %>"><%= image_tag product.url %></a></div>
   <% end %>
 </div>
+
+<div class="us-made">
+  <h3 class="local">US Made</h3>
+    <% @locally_made.each do |product| %>
+      <div class="product"><a href="products/ product.id%>"><%= image_tag product.url %></a></div>
+    <% end %>
+</div>
 <br>
 <br>
 <p> LoveJoy Active is your new favorite one-stop shop for pole dancing and active apparel. All brands and clothing in our store are hand picked to build confidence, comfort, and strength. You can count on us to put together the perfect closet for you and give nothing, but trendy and stydivsh options. All you need to do is pull out the wine and get ready to shop.</p>

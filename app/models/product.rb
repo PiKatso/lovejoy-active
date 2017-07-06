@@ -3,6 +3,7 @@ class Product < ActiveRecord::Base
   validates :cost, numericality: true, :presence => true
   has_many :reviews, dependent: :destroy
 
+
   scope :newest_products, -> { order(created_at: :desc).limit(3)}
 
   scope :most_reviews, -> {(
@@ -12,6 +13,8 @@ class Product < ActiveRecord::Base
     .order("reviews_count DESC")
     .limit(3)
     )}
+
+  scope :locally_made, -> { where(origin: "USA") }
 
   # scope :style, -> (style_param) { where(style: style_param) }
 end
