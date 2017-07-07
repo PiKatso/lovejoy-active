@@ -28,7 +28,7 @@ $ rails s
 
 ## View
 _landing page:_
-![](https://github.com/PiKatso/robotron-shop/blob/master/robotron.png)
+![](https://github.com/PiKatso/robotron-shop/blob/master/public/robotron.png)
 
 ### License
 
