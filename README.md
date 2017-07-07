@@ -26,9 +26,9 @@ $ rails s
 * _Faker_
 * _Database Cleaner_
 
-<!-- ## View
+## View
 _landing page:_
-![]() -->
+![](https://github.com/PiKatso/robotron-shop/blob/master/robotron.png)
 
 ### License
 
