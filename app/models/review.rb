@@ -1,7 +1,7 @@
 class Review < ActiveRecord::Base
   validates :author, :content, :rating, :presence => true
 
-  validates_length_of :content, maximum: 250, message: "we appreciate your feedback, butcharacter maximum allowed has been reached"
+  validates_length_of :content, maximum: 250, message: "is too long (maximum is 250 characters)"
 
   validates_length_of :content, minimum: 50, message: "is too short (minimum is 50 characters)"
 
