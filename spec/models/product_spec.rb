@@ -8,4 +8,5 @@ describe Product do
   it { should validate_presence_of :url }
   it { should have_many :reviews }
   it { should validate_numericality_of(:cost)}
+
 end
